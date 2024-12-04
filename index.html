@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <title>Web_Class</title>
+    <link rel="icon" href="image.png" >
+    <link rel="stylesheet"  href="style.css">
+    
+    
+</head>
+
+
+<body>
+    <h1 > Registration Form</h1>
+    <form action="./form.php" id="registrationForm" method="post" onsubmit=" return validate()">
+        
+        <label for="namme">Name:</label>
+        <input type="text" name="name1" id="namme" placeholder="Enter your name " >
+
+          <span class="error" id="nameError"style="text-align: center; padding-bottom:3px;"></span>
+
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone1" id="phone" placeholder="Enter your Phone" >
+        <span class="error" id="phoneError"style="text-align: center; padding-bottom:3px;"></span>
+        
+        <label for="mail">Email:</label>
+        <input type="email" placeholder="Enter your mail" name="email" id="mail">
+        <span class="error" id="emailError" style="text-align: center; padding-bottom:3px;"></span>
+
+        <label>Gender:</label>
+        <div class="gender-div">
+            <div>
+            <input type="radio" value="m" name="gender" id="male" class="radio">
+            <label for="male">Male</label>
+            </div>
+            <div>
+            <input type="radio" value="f" name="gender" id="female" class="radio">
+            <label for="female">Female</label>
+           </div>
+           <div>
+            <input type="radio" value="o" name="gender" id="others" class="radio">
+            <label for="others">Others</label>
+            </div>
+        </div>
+        <span class="error" id="genderError"style="text-align: center; padding-bottom:3px;"></span>
+
+        <label>Skills:</label>
+        <div class="gender-div">
+            <div>
+            <input type="checkbox" id="read" name="skills[]" value="rrr" style="margin-right: 15px;"><label for="read">Reading</label>
+           </div>
+            <div>
+            <input type="checkbox" id="code" name="skills[]" value="ccc"style="margin-right: 15px;"><label for="code">Coding</label>
+            </div>
+            <div>
+            <input type="checkbox" id="sport" name="skills[]" value="sss" style="margin-right: 15px;"><label for="sport">Sports</label>
+            </div>
+        </div>
+        <span class="error" id="skillError"style="text-align: center; padding-bottom:3px;"></span>
+
+        <label for="country">Country:</label>
+        
+        <select name="cnt" id="country">
+            <option value="" disabled selected>Select your Country</option>
+            <option value="nep" id="country">Nepal</option>
+            <option value="ind" id="country">India</option>
+            <option value="can" id="country">Canada</option>
+            <option value="egy" id="country">Egypt</option>
+            <option value="pol" id="country">Poland</option>
+            <option value="fin" id="country">Finland</option>
+            <option value="chn" id="country">China</option>
+            <option value="bhtn" id="country">Bhutan</option>
+
+
+        </select>
+        <div>
+        <span class="error" id="cntError"style="text-align: center; padding-bottom:3px;"></span>
+    </div>
+        <div class="btn">
+            <button type="submit"  >Submit</button>
+        </div>
+
+    </form>
+    <script src="edit.js"></script>
+</body>
+
+</html>
